@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=east": {
+            "model": "dininghall:block/pos",
+            "y": 90
+        },
+        "facing=north": {
+            "model": "dininghall:block/pos"
+        },
+        "facing=south": {
+            "model": "dininghall:block/pos",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "dininghall:block/pos",
+            "y": 270
+        }
+    }
+}
