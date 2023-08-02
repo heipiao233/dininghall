@@ -13,4 +13,5 @@ public enum ModScreenHandlers {
             .create(RegistryKeys.SCREEN_HANDLER, DiningHall.MODID);
     public static final RegistryObject<ScreenHandlerType<POSScreenHandler>> POS_SCREEN_HANDLER = MOD_SCREEN_HANDLERS
             .register("pos",
-                    () -> IForgeMenuType.create(POSScreenHandler::new));}
+                    () -> IForgeMenuType.create(POSScreenHandler::new));
+}

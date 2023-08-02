@@ -1,7 +1,8 @@
 package net.heipiao.dininghall;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.minecraft.entity.decoration.painting.PaintingVariant;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.heipiao.dininghall.block.ModBlocks;
 import net.heipiao.dininghall.block.entity.ModBlockEntities;
@@ -20,15 +21,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(DiningHall.MODID)
 public class DiningHall {
-    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MODID = "dininghall";
+    public static final DeferredRegister<PaintingVariant> MOD_PAINTING_VARIANTS = DeferredRegister.create(RegistryKeys.PAINTING_VARIANT, MODID);
 
     public DiningHall() {
 
         // This is our mod's event bus, used for things like registry or lifecycle
         // events
         IEventBus MOD_BUS = FMLJavaModLoadingContext.get().getModEventBus();
-
+        MOD_PAINTING_VARIANTS.register(MOD_BUS);
         ModItems.MOD_ITEMS.register(MOD_BUS);
         ModItems.MOD_ITEM_GROUPS.register(MOD_BUS);
         ModBlocks.MOD_BLOCKS.register(MOD_BUS);
@@ -36,13 +37,12 @@ public class DiningHall {
         ModScreenHandlers.MOD_SCREEN_HANDLERS.register(MOD_BUS);
         MOD_BUS.addListener(this::commonSetup);
         MOD_BUS.addListener(this::clientSetup);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            Network.register();
-        });
+        event.enqueueWork(Network::register);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {

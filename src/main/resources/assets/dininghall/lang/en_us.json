@@ -1,0 +1,20 @@
+{
+    "dininghall.tab.food": "Dining Hall: Food",
+    "dininghall.tab.utils": "Dining Hall: Utils",
+
+    "item.dininghall.italy_noodle": "Italy noodle",
+    "item.dininghall.bone_noodle": "Bone noodle",
+    "item.dininghall.rice_set_meal": "Rice set meal",
+    "item.dininghall.rice_noodle": "Rice noodle (Xinghua noodle)",
+    "item.dininghall.chips": "Chips",
+    "item.dininghall.mung_bean_soup": "Mung bean soup",
+    "item.dininghall.card": "Card",
+    "block.dininghall.pos": "POS",
+    "block.dininghall.charger": "Charger",
+    "block.dininghall.card_issuer": "Card issuer",
+
+    "dininghall.text.no_account": "Error when reading card",
+    "dininghall.text.no_money": "No enough money.",
+    "dininghall.text.money": "Amount: %d",
+    "dininghall.screen.pos": "POS"
+}

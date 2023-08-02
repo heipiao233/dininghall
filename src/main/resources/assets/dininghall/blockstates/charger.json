@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=east": {
+            "model": "dininghall:block/charger",
+            "y": 90
+        },
+        "facing=north": {
+            "model": "dininghall:block/charger"
+        },
+        "facing=south": {
+            "model": "dininghall:block/charger",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "dininghall:block/charger",
+            "y": 270
+        }
+    }
+}

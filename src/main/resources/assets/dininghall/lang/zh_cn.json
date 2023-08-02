@@ -1,0 +1,20 @@
+{
+    "dininghall.tab.food": "食堂: 食物",
+    "dininghall.tab.utils": "食堂: 功能方块",
+
+    "item.dininghall.italy_noodle": "意大利面",
+    "item.dininghall.bone_noodle": "大骨浓汤面",
+    "item.dininghall.rice_set_meal": "米饭套餐",
+    "item.dininghall.rice_noodle": "米粉 (兴化粉)",
+    "item.dininghall.chips": "薯条",
+    "item.dininghall.mung_bean_soup": "绿豆汤",
+    "item.dininghall.card": "饭卡",
+    "block.dininghall.pos": "POS 机",
+    "block.dininghall.charger": "充值机",
+    "block.dininghall.card_issuer": "发卡机",
+
+    "dininghall.text.no_account": "读卡失败",
+    "dininghall.text.no_money": "余额不足",
+    "dininghall.text.money": "金额: %d",
+    "dininghall.screen.pos": "POS 机"
+}

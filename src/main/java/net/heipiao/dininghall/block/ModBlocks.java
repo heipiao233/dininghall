@@ -12,4 +12,8 @@ public enum ModBlocks {
             DiningHall.MODID);
     public static final RegistryObject<Block> POS = MOD_BLOCKS.register("pos",
             () -> new POSBlock(Block.Settings.create()));
+    public static final RegistryObject<Block> CHARGER = MOD_BLOCKS.register("charger",
+            () -> new ChargerBlock(Block.Settings.create()));
+    public static final RegistryObject<Block> CARD_ISSUER = MOD_BLOCKS.register("card_issuer",
+        () -> new CardIssuerBlock(Block.Settings.create()));
 }
