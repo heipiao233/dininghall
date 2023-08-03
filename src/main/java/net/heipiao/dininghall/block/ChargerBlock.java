@@ -6,9 +6,7 @@ import javax.annotation.Nullable;
 
 import net.heipiao.dininghall.item.ModItems;
 import net.heipiao.dininghall.saveddata.AccountSavedData;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.Items;
@@ -16,19 +14,27 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+import net.minecraft.world.BlockView;
 
 public class ChargerBlock extends Block {
 
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
+    protected static final VoxelShape SHARP = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 4.0, 16.0);
 
     public ChargerBlock(Settings arg) {
         super(arg);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
+    }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHARP;
     }
 
     @Override
